@@ -1,12 +1,20 @@
 <template>
   <h1>Who is this Pokemon?</h1>
-  <!-- TODO: Picture -->
-  
-  <!-- TODO: Options -->
+  <PokemonPicture />
+  <PokemonOptions />
 </template>
 
 <script>
-export default {};
+import PokemonOptions from '@/components/PokemonOptions.vue';
+import PokemonPicture from '@/components/PokemonPicture.vue';
+
+export default {
+  name: 'PokemonPage',
+  components: {
+    PokemonPicture,
+    PokemonOptions,
+  },
+};
 </script>
 
 <style></style>
