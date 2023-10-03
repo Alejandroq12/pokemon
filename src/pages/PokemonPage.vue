@@ -1,6 +1,6 @@
 <template>
   <h1>Who is this Pokemon?</h1>
-  <PokemonPicture />
+  <PokemonPicture :pokemonId="9" :showPokemon="true"/>
   <PokemonOptions />
 </template>
 
