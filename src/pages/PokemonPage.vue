@@ -4,10 +4,10 @@
     <h1>Who is this Pokemon?</h1>
     <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon" />
     <PokemonOptions :pokemons="pokemonArr" @selection="checkAnswer" />
-    <div>
+    <template v-if="showAnswer">
       <h2 class="fade-in">{{ message }}</h2>
-      <button>Play again</button>
-    </div>
+      <button @click="newGame">Play again</button>
+    </template>
   </div>
 </template>
 
@@ -48,6 +48,13 @@ export default {
         this.message = `Wrong! This is ${this.pokemon.name}`;
       }
     },
+    newGame() {
+      this.showPokemon = false;
+      this.showAnswer = false;
+      this.pokemonArr = [];
+      this.pokemon = null;
+      this.mixPokemonArray();
+    }
   },
   mounted() {
     this.mixPokemonArray();
