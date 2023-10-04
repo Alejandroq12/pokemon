@@ -33,7 +33,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 <div align="center">
     <img src="./assets/logo.png" alt="logo" width="550"  height="auto" />
   <br/>
-  <h3><b>Employee Management</b></h3>
+  <h3><b>pokemon</b></h3>
 
 </div>
 <!-- TABLE OF CONTENTS -->
@@ -63,9 +63,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖Employee Management <a name="about-project"></a>
+# 📖Pokemon <a name="about-project"></a>
 
-"Employee Management" is an employee management CLI that allows you to add, list and search by id.
+Pokemon...
 
 ## 🛠 Built With <a name="built-with"></a>
 HTML,
