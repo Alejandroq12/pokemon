@@ -1,4 +1,4 @@
-import { getPokemons, getPokemonNames } from '@/helpers/getPokemonOptions';
+import getPokemonOptions, { getPokemons, getPokemonNames } from '@/helpers/getPokemonOptions';
 
 describe('getPokemonOptions helpers', () => {
   test('Should return an array of numbers', () => {
@@ -19,5 +19,8 @@ describe('getPokemonOptions helpers', () => {
     ]);
   });
 
-  test('getPokemonOptions must return a mixed array', () => {});
+  test('getPokemonOptions must return a mixed array', async () => {
+    const pokemons = await getPokemonOptions();
+    expect(pokemons.length).toBe(4);
+  });
 });
