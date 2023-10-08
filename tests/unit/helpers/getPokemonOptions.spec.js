@@ -1,4 +1,4 @@
-import { getPokemons } from '@/helpers/getPokemonOptions';
+import { getPokemons, getPokemonNames } from '@/helpers/getPokemonOptions';
 
 describe('getPokemonOptions helpers', () => {
   test('Should return an array of numbers', () => {
@@ -9,7 +9,15 @@ describe('getPokemonOptions helpers', () => {
     expect(pokemons[649]).toBe(650);
   });
 
-  test('It should return an array of four elements with Pokemon names', () => {});
+  test('It should return an array of four elements with Pokemon names', async () => {
+    const pokemons = await getPokemonNames([1, 2, 3, 4]);
+    expect(pokemons).toStrictEqual([
+      { name: 'bulbasaur', id: 1 },
+      { name: 'ivysaur', id: 2 },
+      { name: 'venusaur', id: 3 },
+      { name: 'charmander', id: 4 },
+    ]);
+  });
 
   test('getPokemonOptions must return a mixed array', () => {});
 });
