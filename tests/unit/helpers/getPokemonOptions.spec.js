@@ -8,4 +8,8 @@ describe('getPokemonOptions helpers', () => {
     expect(pokemons[500]).toBe(501);
     expect(pokemons[649]).toBe(650);
   });
+
+  test('It should return an array of four elements with Pokemon names', () => {});
+
+  test('getPokemonOptions must return a mixed array', () => {});
 });
