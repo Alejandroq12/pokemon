@@ -22,5 +22,23 @@ describe('getPokemonOptions helpers', () => {
   test('getPokemonOptions must return a mixed array', async () => {
     const pokemons = await getPokemonOptions();
     expect(pokemons.length).toBe(4);
+    expect(pokemons).toEqual([
+      { 
+        name: expect.any(String),
+        id: expect.any(Number)
+      },
+      { 
+        name: expect.any(String),
+        id: expect.any(Number)
+      },
+      { 
+        name: expect.any(String),
+        id: expect.any(Number)
+      },
+      { 
+        name: expect.any(String),
+        id: expect.any(Number)
+      },
+    ]);
   });
 });
